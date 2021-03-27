@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Array to Hex</string>
+    <string name="hello_blank_fragment">Привет пустой фрагмент</string>
+    <string name="item_home">Главная</string>
+    <string name="item_input">Ввод</string>
+    <string name="item_output">Вывод</string>
+    <string name="text_description">Введите длину массива</string>
+    <string name="edit_text_array_length">Длина массива</string>
+</resources>

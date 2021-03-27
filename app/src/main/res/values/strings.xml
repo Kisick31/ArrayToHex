@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Array to Hex</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="item_home">Home</string>
+    <string name="item_input">Input</string>
+    <string name="item_output">Output</string>
+    <string name="text_description">Enter the length of the array</string>
+    <string name="edit_text_array_length">Array length</string>
+    <string name="text_start_screen">Start screen</string>
+    <string name="toast_epmty_field">The field cannot be empty</string>
+</resources>
