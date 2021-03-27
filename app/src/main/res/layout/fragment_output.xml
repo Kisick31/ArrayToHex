@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".OutputFragment">
 
-    <TextView
-        android:id="@+id/textViewArrayInHex"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        tools:text="Test"
-        android:textAlignment="center"
-        android:layout_alignParentTop="true"
-        android:layout_margin="8dp"/>
+        android:layout_height="wrap_content">
 
-</RelativeLayout>
+        <!-- Уменьшение шрифта позволит вводить большую длину массива без краша приложения-->
+        <TextView
+            android:id="@+id/textViewArrayInHex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_margin="8dp"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            tools:text="Test" />
+
+    </RelativeLayout>
+</ScrollView>

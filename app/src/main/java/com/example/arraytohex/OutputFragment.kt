@@ -7,6 +7,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.arraytohex.ByteToHex.toHexString
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+
 
 class OutputFragment : Fragment() {
 
@@ -20,13 +24,19 @@ class OutputFragment : Fragment() {
         textViewArrayInHex = view.findViewById(R.id.textViewArrayInHex)
 
         val arrayLength = arguments?.getInt("length")
-        if (arrayLength!=null) {
+        if (arrayLength != null) {
             val byteArray = ByteArray(arrayLength) {
-               ((Math.random()*Byte.MAX_VALUE*2).toInt() - Byte.MAX_VALUE).toByte()
+                ((Math.random() * Byte.MAX_VALUE * 2).toInt() - Byte.MAX_VALUE).toByte()
             }
-            textViewArrayInHex.text = byteArray.toHexString()
-        }
 
+            CoroutineScope(Dispatchers.IO).launch {
+                val hexArray = toHexString(byteArray)
+
+                launch(Dispatchers.Main) {
+                    textViewArrayInHex.text = hexArray
+                }
+            }
+        }
 
         return view
     }

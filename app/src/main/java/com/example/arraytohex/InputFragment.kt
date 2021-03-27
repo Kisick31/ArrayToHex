@@ -37,8 +37,13 @@ class InputFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val bundle = Bundle()
         if (editTextArrayLength.text.isNotEmpty()) {
-            bundle.putInt("length", editTextArrayLength.text.toString().toInt())
-            findNavController().navigate(R.id.action_inputFragment_to_outputFragment, bundle)
+            try {
+                bundle.putInt("length", editTextArrayLength.text.toString().toInt())
+                findNavController().navigate(R.id.action_inputFragment_to_outputFragment, bundle)
+            } catch (e: NumberFormatException) {
+                editTextArrayLength.text.clear()
+                Toast.makeText(requireContext(), "Try again, maybe number is too big", Toast.LENGTH_SHORT).show()
+            }
         } else {
             Toast.makeText(requireContext(), getString(R.string.toast_epmty_field), Toast.LENGTH_SHORT).show()
         }
