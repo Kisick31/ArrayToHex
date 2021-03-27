@@ -7,4 +7,7 @@
     <string name="item_output">Вывод</string>
     <string name="text_description">Введите длину массива</string>
     <string name="edit_text_array_length">Длина массива</string>
+    <string name="text_start_screen">Стартовый экран</string>
+    <string name="toast_empty_field">Поле не может быть пустым</string>
+    <string name="catch_for_array_length_field">Попробуйте еще раз, возможно число слишком большое</string>
 </resources>

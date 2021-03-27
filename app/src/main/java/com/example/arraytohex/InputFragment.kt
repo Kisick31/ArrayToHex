@@ -42,10 +42,10 @@ class InputFragment : Fragment() {
                 findNavController().navigate(R.id.action_inputFragment_to_outputFragment, bundle)
             } catch (e: NumberFormatException) {
                 editTextArrayLength.text.clear()
-                Toast.makeText(requireContext(), "Try again, maybe number is too big", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), getString(R.string.catch_for_array_length_field), Toast.LENGTH_SHORT).show()
             }
         } else {
-            Toast.makeText(requireContext(), getString(R.string.toast_epmty_field), Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.toast_empty_field), Toast.LENGTH_SHORT).show()
         }
         return super.onOptionsItemSelected(item)
     }

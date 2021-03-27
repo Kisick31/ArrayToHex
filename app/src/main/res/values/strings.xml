@@ -8,5 +8,6 @@
     <string name="text_description">Enter the length of the array</string>
     <string name="edit_text_array_length">Array length</string>
     <string name="text_start_screen">Start screen</string>
-    <string name="toast_epmty_field">The field cannot be empty</string>
+    <string name="toast_empty_field">The field cannot be empty</string>
+    <string name="catch_for_array_length_field">Try again, maybe number is too big</string>
 </resources>
